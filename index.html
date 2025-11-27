@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Book House — Books & Publishing</title>
+  <meta name="description" content="Sri Book House — School & College Books, Novels, Research & Journals, Magazines. Publishing services, editing, printing and distribution." />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SB</div>
+        <div class="brand-text">
+          <div class="company">Sri Book House</div>
+          <div class="tag">Books • Publishing • Distribution</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#hero">Home</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme" class="icon-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero" data-parallax>
+    <div class="overlay"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-left">
+        <h1>Sri Book House — Where Learning & Stories Meet</h1>
+        <p class="lead">School & College textbooks, timeless novels, research journals and magazines — plus end-to-end publishing services for authors.</p>
+        <div class="hero-ctas">
+          <a href="#catalog" class="btn-primary">Explore Catalog</a>
+          <a href="#services" class="btn-ghost">Publishing Services</a>
+        </div>
+
+        <div class="search-filter">
+          <input id="searchInput" placeholder="Search by title, author or ISBN..." aria-label="Search books">
+          <select id="categorySelect" aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option>School & College Books</option>
+            <option>Novels & Story Books</option>
+            <option>Research & Journals</option>
+            <option>Magazines</option>
+          </select>
+          <select id="sortSelect" aria-label="Sort books">
+            <option value="featured">Sort: Featured</option>
+            <option value="title-asc">Title A → Z</option>
+            <option value="price-asc">Price low → high</option>
+            <option value="price-desc">Price high → low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card-quote">
+          <div class="quote">“Books open doors to whole new worlds.”</div>
+          <div class="quote-sub">— Sri Book House</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Catalog — Featured & Popular</h2>
+        <p class="muted">Click a book card to view details or request a copy.</p>
+      </div>
+
+      <div id="booksGrid" class="books-grid" aria-live="polite">
+        <!-- JS populates cards -->
+      </div>
+
+      <div class="pager">
+        <button id="loadMoreBtn" class="btn-ghost">Load more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section alt">
+    <div class="wrap grid-3">
+      <div class="svc">
+        <h3>Manuscript Editing</h3>
+        <p>Line-editing, copy-editing and proofreading for clarity, structure and tone — trusted by authors and researchers.</p>
+      </div>
+      <div class="svc">
+        <h3>Design & Typesetting</h3>
+        <p>Professional cover and interior design. EPUB & print-ready files with precise typography.</p>
+      </div>
+      <div class="svc">
+        <h3>Printing & Distribution</h3>
+        <p>Short and medium print runs, ISBN assignment, metadata and distribution to stores and online marketplaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap about-grid">
+      <div>
+        <h2>About Sri Book House</h2>
+        <p class="muted">Established local bookseller and publisher with decades of experience serving students, readers and authors. We focus on accuracy, quality print standards and author partnerships.</p>
+        <ul class="about-list">
+          <li>📚 Strong catalog of academic textbooks for local syllabi</li>
+          <li>✍️ Publishing-first approach: clear contracts and royalties</li>
+          <li>🛠️ Full-service support: editing → design → printing → distribution</li>
+        </ul>
+      </div>
+      <div class="about-panel">
+        <img src="https://images.unsplash.com/photo-1512-1575-71f0d53a3d5b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a5b0b" alt="bookstore interior">
+        <div class="panel-text">
+          <strong>Visit Us</strong>
+          <div class="muted">12B Book Lane, Downtown — Mon–Sat · 9:30am – 6:30pm</div>
+          <a href="tel:+919800000000" class="link">+91 98000 00000</a>
+          <a href="mailto:hello@sri-book-house.example" class="link">hello@sri-book-house.example</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section alt">
+    <div class="wrap">
+      <h2>What Authors & Customers Say</h2>
+      <div class="testimonials" id="testimonials">
+        <div class="t-slide active">
+          <p>“Sri Book House helped me publish my first textbook — clear process and great support.”</p>
+          <div class="t-author">— Dr. N. Rao (Author)</div>
+        </div>
+        <div class="t-slide">
+          <p>“Their student books are well-priced and match the syllabus exactly.”</p>
+          <div class="t-author">— S. Mehta (Teacher)</div>
+        </div>
+        <div class="t-slide">
+          <p>“Fast turnaround on design + printing. Recommended.”</p>
+          <div class="t-author">— A. Kapoor (Publisher)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="wrap contact-grid">
+      <div class="contact-form card">
+        <h2>Contact & Publishing Request</h2>
+        <p class="muted">Send us manuscript details or book enquiries.</p>
+        <form id="contactForm" autocomplete="off">
+          <input name="name" id="name" placeholder="Your full name" required />
+          <input type="email" name="email" id="email" placeholder="Email address" required />
+          <input name="phone" id="phone" placeholder="Phone (optional)" />
+          <select id="interest">
+            <option value="">I'm interested in...</option>
+            <option>Buy a book</option>
+            <option>Publishing services</option>
+            <option>Printing & distribution</option>
+            <option>Author partnership</option>
+          </select>
+          <textarea id="message" placeholder="Message / manuscript notes" rows="6"></textarea>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <button class="btn-primary" type="submit">Send Request</button>
+            <div id="contactMsg" class="muted small"></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Quick Info</h3>
+        <p class="muted">We accept publishing enquiries, bulk orders and campus book orders. Typical response: 1–2 business days.</p>
+        <ul class="info-list">
+          <li><strong>Address:</strong> 12B Book Lane, Downtown</li>
+          <li><strong>Hours:</strong> Mon–Sat 9:30–18:30</li>
+          <li><strong>Phone:</strong> +91 98000 00000</li>
+          <li><strong>Email:</strong> hello@sri-book-house.example</li>
+        </ul>
+        <div class="social">
+          <a class="link" href="#" aria-label="Facebook">Facebook</a> •
+          <a class="link" href="#" aria-label="Instagram">Instagram</a> •
+          <a class="link" href="#" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Sri Book House — All rights reserved.</div>
+      <div class="muted">Designed to impress — show this to your boss with pride ✨</div>
+    </div>
+  </footer>
+
+  <!-- BOOK MODAL -->
+  <div id="bookModal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="document" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-content">
+        <img id="modalCover" src="" alt="book cover">
+        <div class="modal-meta">
+          <h3 id="modalTitle"></h3>
+          <div id="modalAuthor" class="muted"></div>
+          <div id="modalCategory" class="tag"></div>
+          <div id="modalPrice" class="price"></div>
+          <p id="modalDesc" class="muted"></p>
+          <div style="margin-top:12px;">
+            <button id="requestBtn" class="btn-primary">Request / Buy</button>
+            <a id="isbnLink" href="#" target="_blank" class="btn-ghost">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
